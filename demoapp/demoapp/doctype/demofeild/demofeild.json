@@ -1,0 +1,280 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "Demo-.###",
+ "creation": "2025-10-03 16:29:05.151265",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "attach_apod",
+  "attach_image_lgpp",
+  "autocomplete_texk",
+  "barcode_llis",
+  "button_vdmf",
+  "check_wssy",
+  "code_audt",
+  "color_ozme",
+  "currency_fztt",
+  "data_hkmr",
+  "dynamic_link",
+  "link",
+  "readonly",
+  "time",
+  "json",
+  "column_break_toha",
+  "date_ansl",
+  "datetime_ehjd",
+  "duration_lekp",
+  "float_wzuu",
+  "geolocation_xlwn",
+  "heading_ucgl",
+  "html_ttmq",
+  "html_editor_pbmk",
+  "icon_hevw",
+  "image_qmwr",
+  "int_vppg",
+  "long_text_fbrq",
+  "markdown_editor_tfya",
+  "password_mhsb",
+  "percent_xwpc",
+  "phone_jnhm",
+  "read_only_xzqp",
+  "rating_kzbu",
+  "select_gjnj",
+  "signature_kfoe",
+  "small_text_dfwc",
+  "text_mujv"
+ ],
+ "fields": [
+  {
+   "fieldname": "attach_apod",
+   "fieldtype": "Attach",
+   "label": "Attach",
+   "length": 3
+  },
+  {
+   "fieldname": "attach_image_lgpp",
+   "fieldtype": "Attach Image",
+   "label": "Attach image"
+  },
+  {
+   "fieldname": "autocomplete_texk",
+   "fieldtype": "Autocomplete",
+   "label": "Autocomplete",
+   "options": "BCA \nMCA"
+  },
+  {
+   "fieldname": "barcode_llis",
+   "fieldtype": "Barcode",
+   "label": "Barcode"
+  },
+  {
+   "fieldname": "button_vdmf",
+   "fieldtype": "Button",
+   "label": "Button"
+  },
+  {
+   "default": "0",
+   "fieldname": "check_wssy",
+   "fieldtype": "Check",
+   "label": "Check"
+  },
+  {
+   "fieldname": "code_audt",
+   "fieldtype": "Code",
+   "label": "Code",
+   "options": "JS"
+  },
+  {
+   "fieldname": "color_ozme",
+   "fieldtype": "Color",
+   "label": "Color"
+  },
+  {
+   "fieldname": "currency_fztt",
+   "fieldtype": "Currency",
+   "label": "Currency"
+  },
+  {
+   "fieldname": "data_hkmr",
+   "fieldtype": "Data",
+   "label": "Data",
+   "options": "Email"
+  },
+  {
+   "fieldname": "column_break_toha",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date_ansl",
+   "fieldtype": "Date",
+   "label": "Date",
+   "placeholder": "wwr"
+  },
+  {
+   "fieldname": "datetime_ehjd",
+   "fieldtype": "Datetime",
+   "label": "Datetime"
+  },
+  {
+   "fieldname": "duration_lekp",
+   "fieldtype": "Duration",
+   "hide_days": 1,
+   "label": "Duration"
+  },
+  {
+   "fieldname": "float_wzuu",
+   "fieldtype": "Float",
+   "label": "Float"
+  },
+  {
+   "fieldname": "geolocation_xlwn",
+   "fieldtype": "Geolocation",
+   "label": "Goelocation"
+  },
+  {
+   "fieldname": "heading_ucgl",
+   "fieldtype": "Heading",
+   "label": "Heading"
+  },
+  {
+   "fieldname": "html_ttmq",
+   "fieldtype": "HTML",
+   "label": "Html"
+  },
+  {
+   "fieldname": "html_editor_pbmk",
+   "fieldtype": "HTML Editor",
+   "ignore_xss_filter": 1,
+   "label": "Html editor"
+  },
+  {
+   "fieldname": "icon_hevw",
+   "fieldtype": "Icon",
+   "label": "Icon"
+  },
+  {
+   "fieldname": "image_qmwr",
+   "fieldtype": "Image",
+   "label": "Image",
+   "options": "attach_image_lgpp"
+  },
+  {
+   "fieldname": "int_vppg",
+   "fieldtype": "Int",
+   "label": "Int"
+  },
+  {
+   "fieldname": "long_text_fbrq",
+   "fieldtype": "Long Text",
+   "label": "Long Text"
+  },
+  {
+   "fieldname": "markdown_editor_tfya",
+   "fieldtype": "Markdown Editor",
+   "label": "Markdown editor"
+  },
+  {
+   "fieldname": "password_mhsb",
+   "fieldtype": "Password",
+   "label": "Password"
+  },
+  {
+   "fieldname": "percent_xwpc",
+   "fieldtype": "Percent",
+   "label": "Percent"
+  },
+  {
+   "fieldname": "phone_jnhm",
+   "fieldtype": "Phone",
+   "label": "Phone"
+  },
+  {
+   "fieldname": "read_only_xzqp",
+   "fieldtype": "Read Only",
+   "label": "Read only"
+  },
+  {
+   "fieldname": "rating_kzbu",
+   "fieldtype": "Rating",
+   "label": "Rating"
+  },
+  {
+   "fieldname": "select_gjnj",
+   "fieldtype": "Select",
+   "label": "Select",
+   "options": "svs\ndsf"
+  },
+  {
+   "fieldname": "signature_kfoe",
+   "fieldtype": "Signature",
+   "label": "Signature"
+  },
+  {
+   "fieldname": "small_text_dfwc",
+   "fieldtype": "Small Text",
+   "label": "Small text"
+  },
+  {
+   "fieldname": "text_mujv",
+   "fieldtype": "Text",
+   "label": "Text"
+  },
+  {
+   "fieldname": "dynamic_link",
+   "fieldtype": "Dynamic Link",
+   "label": "Dynamic link",
+   "options": "link"
+  },
+  {
+   "fieldname": "link",
+   "fieldtype": "Link",
+   "label": "Link",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "readonly",
+   "fieldtype": "Read Only",
+   "label": "Readonly"
+  },
+  {
+   "fieldname": "time",
+   "fieldtype": "Time",
+   "label": "Time"
+  },
+  {
+   "fieldname": "json",
+   "fieldtype": "JSON",
+   "label": "Json"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-11-06 16:26:37.503933",
+ "modified_by": "Administrator",
+ "module": "Demoapp",
+ "name": "demofeild",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

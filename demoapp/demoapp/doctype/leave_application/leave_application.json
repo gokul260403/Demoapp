@@ -1,0 +1,131 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{emp_name}-{###}",
+ "creation": "2025-10-23 18:08:36.618930",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_bvar",
+  "amended_from",
+  "emp_name",
+  "role",
+  "remaining_leave",
+  "from_date",
+  "to_date",
+  "leave_days",
+  "description",
+  "status",
+  "excluding_sundays"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_bvar",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Leave Application",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "emp_name",
+   "fieldtype": "Link",
+   "label": "Emp Name",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "emp_name.role",
+   "fetch_if_empty": 1,
+   "fieldname": "role",
+   "fieldtype": "Data",
+   "label": "Role"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text Editor",
+   "in_list_view": 1,
+   "label": "Description",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\napplied\napproved\nrejected",
+   "read_only": 1
+  },
+  {
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "label": "From Date"
+  },
+  {
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "label": "To Date",
+   "reqd": 1
+  },
+  {
+   "depends_on": "emp_name",
+   "fetch_from": "emp_name.remaining_leave",
+   "fieldname": "remaining_leave",
+   "fieldtype": "Int",
+   "label": "Remaining Leave"
+  },
+  {
+   "depends_on": "to_date",
+   "fieldname": "leave_days",
+   "fieldtype": "Data",
+   "label": "Leave Days"
+  },
+  {
+   "fieldname": "excluding_sundays",
+   "fieldtype": "Int",
+   "label": "Excluding Sundays",
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-11-01 19:12:54.850144",
+ "modified_by": "Administrator",
+ "module": "Demoapp",
+ "name": "Leave Application",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [
+  {
+   "color": "Blue",
+   "title": "Draft"
+  }
+ ],
+ "title_field": "emp_name"
+}

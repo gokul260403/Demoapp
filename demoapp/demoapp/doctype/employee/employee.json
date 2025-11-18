@@ -1,0 +1,109 @@
+{
+ "actions": [
+  {
+   "action": "demoapp.demoapp.doctype.sample.sample.gokul",
+   "action_type": "Server Action",
+   "label": "Action"
+  }
+ ],
+ "allow_auto_repeat": 1,
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "emp-.###",
+ "creation": "2025-10-24 13:29:54.650827",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "employee_name",
+  "role",
+  "email",
+  "contact_no",
+  "amended_from",
+  "used_leave",
+  "remaining_leave"
+ ],
+ "fields": [
+  {
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Employee Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "role",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Role"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email"
+  },
+  {
+   "fieldname": "contact_no",
+   "fieldtype": "Phone",
+   "label": "Contact No"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Employee",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "used_leave",
+   "fieldtype": "Int",
+   "label": "Used Leave",
+   "non_negative": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "remaining_leave",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Remaining Leave",
+   "non_negative": 1,
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "link_doctype": "sample",
+   "link_fieldname": "name"
+  }
+ ],
+ "modified": "2025-11-11 11:45:01.073682",
+ "modified_by": "Administrator",
+ "module": "Demoapp",
+ "name": "Employee",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

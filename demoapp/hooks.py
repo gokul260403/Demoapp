@@ -244,4 +244,13 @@ app_license = "mit"
 # default_log_clearing_doctypes = {
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
+ 
+doc_events={
+    "ToDo":{
+        "before_save":"demoapp.demoapp.API.file_api.save",
+    }
+}
 
+scheduler_events={
+    "hourly":["demoapp.demoapp.notification.gn.gn.hourly_notification"],
+}

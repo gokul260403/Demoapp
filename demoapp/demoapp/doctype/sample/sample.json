@@ -1,0 +1,82 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "beta": 1,
+ "creation": "2025-10-25 18:21:58.949667",
+ "description": "This is a sample doctype.",
+ "doctype": "DocType",
+ "documentation": " ",
+ "engine": "InnoDB",
+ "field_order": [
+  "name1",
+  "select",
+  "select1",
+  "suma",
+  "logs",
+  "custom_html"
+ ],
+ "fields": [
+  {
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "label": "Name"
+  },
+  {
+   "fieldname": "select",
+   "fieldtype": "Select",
+   "label": "select",
+   "options": "suma\nsuma1\nsuma2"
+  },
+  {
+   "fieldname": "select1",
+   "fieldtype": "Select",
+   "label": "SELECT1",
+   "options": "GOK1\nGOK2"
+  },
+  {
+   "fieldname": "suma",
+   "fieldtype": "Link",
+   "label": "suma",
+   "options": "student"
+  },
+  {
+   "fieldname": "logs",
+   "fieldtype": "Table",
+   "label": "Logs",
+   "options": "Sample Log"
+  },
+  {
+   "fieldname": "custom_html",
+   "fieldtype": "HTML",
+   "label": "Custom Html"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-11-10 19:29:57.699351",
+ "modified_by": "Administrator",
+ "module": "Demoapp",
+ "name": "sample",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_seen": 1
+}
