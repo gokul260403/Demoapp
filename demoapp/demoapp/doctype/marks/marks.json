@@ -1,0 +1,44 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-11-21 15:35:56.756890",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "subject",
+  "score"
+ ],
+ "fields": [
+  {
+   "columns": 2,
+   "fieldname": "subject",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Subject",
+   "options": "Subjects"
+  },
+  {
+   "columns": 6,
+   "fieldname": "score",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Score"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-11-21 16:29:47.195933",
+ "modified_by": "Administrator",
+ "module": "Demoapp",
+ "name": "Marks",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
