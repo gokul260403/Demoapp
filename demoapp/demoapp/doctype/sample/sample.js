@@ -1,8 +1,19 @@
 // Copyright (c) 2025, gokul and contributors
 // For license information, please see license.txt
 
-// frappe.ui.form.on("sample", {
-// 	refresh(frm) {
+frappe.ui.form.on("sample", {
+    before_save: function(frm) {
+        frappe.utils.play_sound("ping");
+    },
+	refresh(frm) {
+        frappe.realtime.on("test_event", (data) => {
+        alert(data.text);
+        });
+        // frappe.realtime.off('test_event');
+
+
+        frappe.realtime.on("doctype_update", (d) => console.log("Update:", d));
+
 
         //get_route()
         // frappe.msgprint("Route:"+frappe.get_route());
@@ -11,8 +22,8 @@
         // frm.add_custom_button("Student",function(){
         //     // frappe.set_route('List', 'student');
         //     // frappe.set_route(['List', 'student']);
-        //     //frappe.set_route('List/student');
-        //     //frappe.set_route("List", "student", { select_dept: "MCA" });
+        //     // frappe.set_route('List/student');
+        //     // frappe.set_route("List", "student", { select_dept: "MCA" });
         // });
       
 
@@ -24,24 +35,65 @@
         //provide()
 
 
+        
     //     frappe.require([
     //     "/assets/demoapp/js/library1.js",
     //     "/assets/demoapp/js/library2.js" ], function() {
     //     frappe.msgprint("Both libraries loaded!");
     // });
 
-    //     frappe.require("/assets/demoapp/js/custom_chart.js", function() {
-    //         frappe.msgprint("Custom JS loaded successfully!");
-    //         create_chart();
-    //     });
+        // frappe.require("/assets/demoapp/js/custom_chart.js", function() {
+        //     frappe.msgprint("Custom JS loaded successfully!");
+        //     create_chart();
+        // });
 
 
-//    //server call AJAx
-//     frappe.db.get_value('Employee','emp-008','role').then(r => {
-//         frappe.msgprint(r.message.role)
-//     })   
-// 	},
-// });
+   //server call AJAx
+    // frappe.db.get_value('Employee','emp-001','role').then(r => {
+    //     frappe.msgprint(r.message.role)
+    // })   
+
+    // frappe.db.get_doc("Employee",'emp-001').then(r =>{
+    //     frappe.msgprint(r.role)
+    // })
+
+    // frappe.db.get_list("Employee",{
+    //     fields:["employee_name"],filters:{role:"SE"}
+    // }).then(r=>{
+    //     console.log(r);
+    // })
+    // frappe.db.set_value('Employee','emp-001','role','HR').then(r=>{
+    //     console.log(r.message);
+    // })
+
+    // frappe.db.set_value('Employee','emp-001','role','SE').then(r=>{
+    //     console.log(r.message);
+    // })
+
+    // frappe.db.insert({doctype:"Employee",employee_name:"sam"}).then(r=>{
+    //     console.log(r)
+    // })
+
+    // frappe.db.insert({doctype:"Employee",employee_name:"samraj"}).then(r=>{
+    //     console.log(r)
+    // })
+
+    //  frappe.db.count("Employee",{role:"SE"}).then(r=>{
+    //     console.log(r)
+    //  })
+
+    //    frappe.db.delete_doc("Employee",'emp-004').then(r=>{
+    //     console.log(r.message)
+    //    });
+
+       
+    //    frappe.db.exists("Employee","emp-004").then(exists=>{
+    //     console.log(exists)
+    // });
+      
+
+
+
 
 
 
@@ -116,6 +168,8 @@
 
 
 
+
+
 //Form Control (make_control)
 
 // frappe.ui.form.on("sample", {
@@ -145,3 +199,106 @@
 //     }
 // });
 
+
+
+
+
+
+
+
+// frappe.ui.form.on("sample", {
+//     refresh(frm) {
+//         frappe.msgprint({
+//     title: __('Notification'),
+//     indicator: 'green',
+//     message: __('refresh')
+// });
+    
+
+// frappe.throw(__('This is an Error Message'))
+
+// frappe.prompt('First Name', ({ value }) => console.log(value))
+
+// frappe.prompt({
+//     label: 'Birth Date',
+//     fieldname: 'date',
+//     fieldtype: 'Date'
+// }, (values) => {
+//     console.log(values.date);
+// })
+   
+// frappe.show_alert({
+//     message:__('Hi, you have a new message'),
+//     indicator:'green'
+// }, 5);
+
+
+
+
+
+// frappe.confirm('Are you sure you want to proceed?',
+//     () => {
+       
+// frappe.show_alert({
+//     message:__('Hi, you have a new message'),
+//     indicator:'green'
+// }, 5);
+//     }, () => {
+//           console.log("No")
+//     })
+
+// frappe.warn('Are you sure you want to proceed?',
+//     'There are unsaved changes on this page',
+//     () => {
+//          console.log("yes")    
+//     },
+//     'Continue',
+//     true 
+// )
+
+// frappe.show_progress('Loading..', 70, 100, 'Please wait');
+
+
+
+// MultiSelectDialog
+    // frm.add_custom_button("Select Leave Applications", () => {
+    //         new frappe.ui.form.MultiSelectDialog({
+    //             doctype: "Leave Application",
+    //             target: frm,
+    //             setters: {
+    //                 emp_name: null,
+    //                 status: "approved"
+    //             },
+    //             add_filters_group: 1,
+    //             date_field: "from_date",
+
+    //             get_query() {
+    //                 return {
+    //                     filters: {
+    //                         docstatus: ["!=", 2]
+    //                     }
+    //                 };
+    //             },
+
+    //             action(selections) {
+    //                 frappe.msgprint("Selected:<br>" + selections.join("<br>"));
+    //                 console.log(selections);
+    //             }
+    //         });
+    // });
+
+// scanner api
+    // frm.add_custom_button("scanner",() => {
+    //     new frappe.ui.Scanner({
+    //         dialog:true,
+    //         multiple:true,
+    //         on_scan(data) {
+    //         handle_scanned_barcode(data.decodedText); //use console.log(data.decodedText)
+    //         }
+    //     })
+    // })
+
+
+    },
+});
+ 

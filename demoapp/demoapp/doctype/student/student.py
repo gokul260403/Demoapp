@@ -3,6 +3,7 @@
 
 import frappe
 from frappe.model.document import Document
+from frappe.search.full_text_search import FullTextSearch
 
 class student(Document):
     # def before_insert(self):
@@ -46,9 +47,32 @@ class student(Document):
         
         # frappe.delete_doc('demofeild','Demo-002')
         # frappe.rename_doc('demofeild', 'Demo-001', 'Demo-0001')
-    pass
+        pass
+        
+        
+        
+        
+        
+        
+        
+    
     
 @frappe.whitelist()
 def name(f_name,l_name):
     full_name=f_name+l_name
     return full_name
+
+ 
+
+@frappe.whitelist()
+def create_student_record(student_name, email, age, address=None):
+    student = frappe.get_doc({
+        "doctype": "student",
+        "student_name": student_name,
+        "email": email,
+        "age": age,
+        "address": address
+    })
+    student.insert()
+    frappe.db.commit()
+    return student.name

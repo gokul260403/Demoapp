@@ -3,13 +3,28 @@
 
 import frappe
 from frappe.model.document import Document
+from frappe.query_builder.functions import Count 
+
 
 
 class Employee(Document):
     def before_insert(self):
         total_leave = frappe.db.get_single_value('Leave Settings', 'total_leave')
         self.remaining_leave=total_leave
-       
+        
+        
+        
+        
+    def before_save(self):
+        Employee = frappe.qb.DocType("Employee")
+        query = (
+            frappe.qb.from_(Employee)
+            .select(Employee.role, Count(Employee.name).as_('total'))
+            .groupby(Employee.role)
+        )
+
+        # print(frappe.db.sql(query))  # or query.run()
+        print(query.run())
 
 
 @frappe.whitelist()
@@ -67,9 +82,9 @@ def update_employee(name=None):
 
 @frappe.whitelist()
 def delete_employee(name):
-    doc=frappe.delete_doc("Employee",name)
+    frappe.delete_doc("Employee",name)
     frappe.db.commit()
-    return{"message":"deleted","name":doc.name}
+    return{"message":"deleted","name":name}
 
 # @frappe.whitelist()
 # def update_employee(name):

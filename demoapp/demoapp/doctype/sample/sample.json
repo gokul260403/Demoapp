@@ -13,7 +13,9 @@
   "select1",
   "suma",
   "logs",
-  "custom_html"
+  "custom_html",
+  "amended_from",
+  "scanner_bar"
  ],
  "fields": [
   {
@@ -25,7 +27,7 @@
    "fieldname": "select",
    "fieldtype": "Select",
    "label": "select",
-   "options": "suma\nsuma1\nsuma2"
+   "options": "sample\nsample1\nsample2"
   },
   {
    "fieldname": "select1",
@@ -49,12 +51,27 @@
    "fieldname": "custom_html",
    "fieldtype": "HTML",
    "label": "Custom Html"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "sample",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "scanner_bar",
+   "fieldtype": "Barcode",
+   "label": "scanner bar"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-11-10 19:29:57.699351",
+ "modified": "2025-12-06 15:37:03.358708",
  "modified_by": "Administrator",
  "module": "Demoapp",
  "name": "sample",

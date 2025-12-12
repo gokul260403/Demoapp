@@ -244,13 +244,50 @@ app_license = "mit"
 # default_log_clearing_doctypes = {
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
+
+# doctype_js = {
+#     "Employee": "public/js/employee_list.js"
+# }
+
+doctype_list_js = {"Employee" : "demoapp/public/js/employee_list.js"}
+
+# doc_events={
+#     "ToDo":{
+#         "before_save":"demoapp.demoapp.API.file_api.save",
+#     }
+# }
  
-doc_events={
-    "ToDo":{
-        "before_save":"demoapp.demoapp.API.file_api.save",
-    }
-}
+app_include_js = "/assets/demoapp/js/scanner.js?v=5"
+app_include_css = "/assets/demoapp/css/custom.css?v=8"
+
 
 scheduler_events={
     "hourly":["demoapp.demoapp.notification.gn.gn.hourly_notification"],
+    "cron":{
+        "0 14 * * * ":[
+            "demoapp.demoapp.doctype.sample.sample.publish"
+        ],
+        "* * * * *": [
+        "demoapp.demoapp.API.chart_api.push_demo_data"
+        ]
+    }
+    
+   
 }
+sounds=[{"name":"ping","src":"/assets/demoapp/sounds/ping.mp3","volume":0.2}]
+ 
+ 
+before_migrate="demoapp.hooksetup.migrate.before_migrate"
+after_migrate="demoapp.hooksetup.migrate.after_migrate"
+
+
+before_tests="demoapp.hooksetup.tests.before_tests"
+
+
+before_write_file = "demoapp.hooksetup.file.before_write"
+# write_file = "demoapp.hooksetup.file.write_file"
+# delete_file_data_content = "demoapp.hooksetup.file.delete_file"
+
+
+get_sender_details = "demoapp.hooksetup.email.get_sender_details"
+override_email_send = "demoapp.hooksetup.email.send"

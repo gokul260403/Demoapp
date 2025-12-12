@@ -27,9 +27,9 @@ frappe.pages['demo-page'].on_page_load = function(wrapper) {
 
 
 // add a normal inner button
-// page.add_inner_button('Update Posts', () => update_posts())
+page.add_inner_button('Update Posts', () => update_posts())
 // add a dropdown button in a group
-// page.add_inner_button('New Post', () => new_post(), 'Make')
+page.add_inner_button('New Post', () => new_post(), 'Make')
 
 
 // // change type of ungrouped button

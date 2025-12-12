@@ -9,6 +9,16 @@ frappe.ui.form.on("Leave Application", {
     from_date(frm){
         Leave_calculation(frm)
 
+    },
+    refresh(frm){
+        frm.set_query("emp_name",() => {
+        return{
+            filters: {
+              role:'SE',
+              remaining_leave: ['>', 0]
+            }
+        }
+        })
     }
 });
 

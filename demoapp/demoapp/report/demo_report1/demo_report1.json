@@ -1,0 +1,29 @@
+{
+ "add_total_row": 0,
+ "add_translate_data": 0,
+ "columns": [],
+ "creation": "2025-11-21 18:53:02.773322",
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "json": "{\"filters\":[],\"fields\":[[\"name\",\"demofeild\"],[\"autocomplete_texk\",\"demofeild\"],[\"date_ansl\",\"demofeild\"],[\"data_hkmr\",\"demofeild\"],[\"currency_fztt\",\"demofeild\"]],\"order_by\":\"`tabdemofeild`.`creation` desc\",\"add_totals_row\":true,\"page_length\":20,\"column_widths\":{\"name\":120,\"autocomplete_texk\":120,\"date_ansl\":120,\"data_hkmr\":120,\"currency_fztt\":120},\"group_by\":null}",
+ "letterhead": null,
+ "modified": "2025-11-26 11:37:23.925222",
+ "modified_by": "Administrator",
+ "module": "Demoapp",
+ "name": "demo report1",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "ref_doctype": "demofeild",
+ "report_name": "demo report1",
+ "report_type": "Report Builder",
+ "roles": [
+  {
+   "role": "System Manager"
+  }
+ ],
+ "timeout": 0
+}

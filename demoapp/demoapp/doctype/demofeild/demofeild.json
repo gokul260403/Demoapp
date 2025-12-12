@@ -16,8 +16,8 @@
   "color_ozme",
   "currency_fztt",
   "data_hkmr",
-  "dynamic_link",
   "link",
+  "dynamic_link",
   "code_audt",
   "readonly",
   "time",
@@ -230,12 +230,6 @@
    "label": "Text"
   },
   {
-   "fieldname": "dynamic_link",
-   "fieldtype": "Dynamic Link",
-   "label": "Dynamic link",
-   "options": "link"
-  },
-  {
    "fieldname": "link",
    "fieldtype": "Link",
    "label": "Link",
@@ -257,18 +251,27 @@
    "label": "Json"
   },
   {
+   "collapsible": 1,
+   "collapsible_depends_on": "markdown_editor_tfya",
    "fieldname": "section_break_ikvj",
-   "fieldtype": "Section Break"
+   "fieldtype": "Section Break",
+   "label": "markdown"
   },
   {
    "fieldname": "section_break_lfxo",
    "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "dynamic_link",
+   "fieldtype": "Dynamic Link",
+   "label": "Dynamic Link",
+   "options": "link"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-11-21 14:57:35.124160",
+ "modified": "2025-11-26 11:33:22.760763",
  "modified_by": "Administrator",
  "module": "Demoapp",
  "name": "demofeild",
